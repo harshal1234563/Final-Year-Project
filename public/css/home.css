@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+
+/* Remove padding and margin */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.fs-18 {
+    font-size: 17px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 2px;
+    padding: 0;
+}
+
+.border {
+    height: 100px;
+    border: solid black 2px;
+}
+
+
+/* ********** Cuatom-CSS ********* */
+
+
+/* .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+} */
+
+.nav-item {
+    margin-left: 50px;
+}
+
+.search button {
+    background: none;
+}
+
+.nav-btn {
+    border-bottom: solid #f8f9fa 2px;
+    /* padding-bottom: 0px; */
+}
+
+.nav-btn:hover {
+    border-bottom: solid black 2px;
+    /* outline-width: 10px; */
+}
+
+
+/* Slider */
+
+.slick-slide {
+    margin: 0px 10px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+
+/* ******* Hero Section ****** */
+
+#hero-section {
+    background-color: #171a29;
+    /* height: 350px; */
+}
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    width: 47px;
+    height: 47px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgb(41 48 63 / 25%);
+    border-radius: 100%;
+    text-align: center;
+    cursor: pointer;
+    outline: 0;
+}
+
+.slick-prev {
+    left: 0;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.slick-next {
+    right: 0;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-25%, -50%);
+}
+
+.slide {
+    margin-right: 2.1875rem;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.slide:hover {
+    transform: scale(1.05);
+}
+
+
+/* .slick-slide img {
+    width: 235px !important;
+} */
+
+
+/* ******* Recomendation Section ****** */
+
+
+/* .recomendation-header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: white;
+} */
+
+#recomendation hr {
+    position: sticky;
+    top: 50px;
+    z-index: 999;
+}
+
+.c-button {
+    text-decoration: none;
+    margin: 0 20px 0 30px;
+    padding: 8px 28px;
+    color: white;
+    background-color: #212849;
+    border: solid #1d1134 2px;
+    border-radius: 5px;
+}
+
+.c-button:hover {
+    transition: 0.3s linear;
+    background-color: #171a29;
+    color: white;
+}
+
+.card {
+    color: #000000;
+    /* font-size: 17px; */
+    font-weight: 500;
+}
+
+.card:hover {
+    transition: 0.19s;
+    box-shadow: 0px 4px 5px 2px rgb(17, 17, 17, 0.29);
+}
+
+.card-img img {
+    height: 160px;
+    width: 13.8125rem;
+}
+
+.card-body p {
+    font-size: 13px;
+    margin-bottom: 0.5625rem;
+}
+
+.card-body .fa-star {
+    background-color: #48c479;
+    color: white;
+    padding: 3px;
+}
+
+.spacing {
+    margin-right: 0.6875rem;
+}
+
+.custom {
+    max-width: 55vw !important;
+    height: 100%;
+    /* text-align: center; */
+    /* background: rgba(0, 0, 0, 0.75); */
+}
+
+.modal-content {
+    padding: 1.875rem;
+}
+
+.submt-button {
+    margin: 10% 41%;
+    margin-bottom: 0px;
+}
+
+
+/* *************** top-picks ********** */
+
+.t-card img {
+    height: 13.75rem;
+    width: 15.875rem;
+}
+
+.t-Content {
+    display: inline-block;
+    margin-left: 65px;
+    margin-top: -20px;
+}
+
+
+/* *************** Footer-Section ********** */
+
+.footer {
+    background-color: #0b0e1e;
+    color: white;
+    overflow-x: hidden;
+}
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+.gridContainer {
+    padding: 30px 30px 0px 30px;
+}

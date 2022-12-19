@@ -1,0 +1,453 @@
+{{> navbar}}
+<main>
+  <!-- *======================== Hero-Section ====================== -->
+            <section id="hero-section">
+                <div class="container py-5">
+                    <div class="customer-logos slider mx-auto d-flex justify-content-center">
+                        <div class="slide" style="width: 255px;">
+                            <img src="/static/Asset/1.jpg" width="30px">
+                        </div>
+                        <div class="slide ">
+                            <img src="/static/Asset/2.jpg " width="30px">
+                        </div>
+                        <div class="slide">
+                            <img src="/static/Asset/3.jpg" width="30px">
+                        </div>
+                        <div class="slide ">
+                            <img src="/static/Asset/6.webp " width="30px">
+                        </div>
+                        <div class="slide">
+                            <img src="/static/Asset/4.jpg" width="30px">
+                        </div>
+                        <div class="slide ">
+                            <img src="/static/Asset/5.jpeg " width="30px">
+                        </div>
+                        <div class="slide">
+                            <img src="/static/Asset/6.webp" width="30px">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- *================================== Recomendation-Section ================================================== -->
+        <section class="py-5 " id="recomendation ">
+            <div class="container ">
+                <div class="d-flex flex-row justify-content-between recomendation-header">
+                    <div>
+                        <h3>Recomendation</h3>
+                    </div>
+                    <div>
+                        <h4 class="d-inline ">Select priority</h4>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="c-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Choose</button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered custom">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Select Priority</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Give your priorities to us so we will give you the better Recommendation</p>
+                                        <!-- --------form to take preferences --------- -->
+                                        <form class="pt-3 ">
+                                            <div class="row ">
+                                                <div class="col ">
+                                                    <select class="form-select " aria-label="Default select example ">
+                                                        <option selected>Select First Priority</option>
+                                                        <option value="1 ">Location</option>
+                                                        <option value="2 ">Price</option>
+                                                        <optgroup label="Cuisine">
+                                                            <option>Maharashtrian</option>
+                                                            <option>South Indian</option>
+                                                            <option>Gujrati</option>
+                                                            <option>Punjabi</option>
+                                                          </optgroup>
+                                                      </select>
+                                                </div>
+                                                <div class="col ">
+                                                    <select class="form-select " aria-label="Default select example ">
+                                                        <option selected>Select Second Priority</option>
+                                                        <option value="1 ">Location</option>
+                                                        <option value="2 ">Price</option>
+                                                        <optgroup label="Cuisine">
+                                                            <option>Maharashtrian</option>
+                                                            <option>South Indian</option>
+                                                            <option>Gujrati</option>
+                                                            <option>Punjabi</option>
+                                                          </optgroup>
+                                                      </select>
+                                                </div>
+                                                <div class="col ">
+                                                    <select class="form-select " aria-label="Default select example ">
+                                                        <option selected>Select Third Priority</option>
+                                                        <option value="1 ">Location</option>
+                                                        <option value="2 ">Price</option>
+                                                        <optgroup label="Cuisine">
+                                                            <option>Maharashtrian</option>
+                                                            <option>South Indian</option>
+                                                            <option>Gujrati</option>
+                                                            <option>Punjabi</option>
+                                                          </optgroup>
+                                                      </select>
+                                                </div>
+
+                                            </div>
+                                            <button type="submit " class="c-button submt-button " data-bs-dismiss="modal ">Submit</button>
+                                        </form>
+                                    </div>
+                                    <!-- <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Understood</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <hr>
+
+                <div class="container py-4 ">
+                    <div class="row ">
+                        {{#data}}
+                        <div class="col-md-3 col-sm-6 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card ">
+                                        <div class="py-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/handi.webp " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>{{mess_name}}</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type</strong>  : Veg</span><span><strong>Cuisine</strong>  : Gujrati</span></p>
+                                                <p><strong>Location</strong> : C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> {{rating}}</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        {{/data}}
+                        <!--<div class="col-md-3 col-sm-6 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card ">
+                                        <div class="py-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/4.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type</strong>  : Veg</span><span><strong>Cuisine</strong>  : Gujrati</span></p>
+                                                <p><strong>Location</strong> : C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "></i><span style="font-size:0.8125rem; "> 4.5</span></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card ">
+                                        <div class="py-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/2.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type</strong>  : Veg</span><span><strong>Cuisine</strong>  : Gujrati</span></p>
+                                                <p><strong>Location</strong> : C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card ">
+                                        <div class="py-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/3.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type</strong>  : Veg</span><span><strong>Cuisine</strong>  : Gujrati</span></p>
+                                                <p><strong>Location</strong> : C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </section><br>
+
+        <!-- *================================== Top-Picks-Section ================================================== -->
+        <section class="py-2 " id="top-pick ">
+            <div class="container ">
+                <h3 class="text-center ">Top Picks</h3>
+                <hr>
+
+                <div class="container ">
+                    <div class="row py-3 ">
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/1.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert</span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/2.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/3.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/4.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/5.jpeg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/1.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/2.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 pb-5 ">
+                            <div>
+                                <a class="text-decoration-none " href=" " target="_blank " rel="noopener noreferrer ">
+                                    <div class="card t-card ">
+                                        <div class="pb-3 ">
+                                            <div class="card-img text-center ">
+                                                <img src="/static/Asset/3.jpg " alt="Food-Image " srcset=" ">
+                                            </div>
+                                            <div class="card-body ">
+                                                <h5>Sharma Mess</h5>
+                                                <p style="margin-bottom: 0.5625rem; "><span class="spacing "><strong>Type : </strong> Veg</span><span><strong>Cuisine : </strong> Gujrati</span></p>
+                                                <p><strong>Location : </strong> C/o Shree D K Deshmukh, Navnage Layout Jijamata High School, New, Old State Bank Colony, Wardha, Maharashtra 442001</p>
+                                                <p><strong>Content : </strong> <span class="t-Content "> 1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert
+                                                    </span></p>
+                                                <hr>
+                                                <div class="d-flex flex-row justify-content-between pt-2 ">
+                                                    <div><i class="fa-sharp fa-solid fa-star "><span style="font-size:0.8125rem; "> 4.5</span></i></div>
+                                                    <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</main>
+{{> last}}

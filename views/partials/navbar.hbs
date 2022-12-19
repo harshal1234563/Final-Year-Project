@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+                <div class="container py-2">
+                    <!-- --------- Icon---------- -->
+                    <a class="navbar-brand " href="/">
+                        <img src="/static/Asset/logo.png " alt=" " width="40" height="40" class="d-inline-block align-text-top">
+                    </a>
+                    <button class="navbar-toggler " type="button " data-bs-toggle="collapse " data-bs-target="#navbarNav " aria-controls="navbarNav " aria-expanded="false " aria-label="Toggle navigation ">
+                    <span class="navbar-toggler-icon "></span>
+                  </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav ">
+                        <ul class="navbar-nav">
+                            <!-- ------search------- -->
+                            <form class="d-flex search">
+                                <input class="form-control me-3" type="search" placeholder="Search Mess" aria-label="Search">
+                                <button class="" type="submit"><i class="fas fa-search fs-4"></i></button>
+                            </form>
+
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn pt-3" href="/register" style="font-size: 1.125rem;">Register Mess</a>
+                            </li>
+
+                            <!-- --- CART --- -->
+                            <li class="nav-item">
+                                <a class="nav-link nav-btn" href="/cart"><i class="fa-solid fa-cart-plus fs-3"></i></a>
+                            </li>
+                            <!-- ---user--- -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-btn" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-user fs-3"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="/login">Log In</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="/createAccount">Create Account</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
