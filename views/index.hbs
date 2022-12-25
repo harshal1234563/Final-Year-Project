@@ -31,7 +31,7 @@
             </section>
 
 
-            <!-- *================================== Recomendation-Section ================================================== -->
+        <!-- *================================== Recomendation-Section ================================================= -->
         <section class="py-5 " id="recomendation ">
             <div class="container ">
                 <div class="d-flex flex-row justify-content-between recomendation-header">
@@ -62,7 +62,7 @@
                         {{#data}}
                         <div id="hide" class="col-md-3 col-sm-6 ">
                             <div>
-                                <a class="text-decoration-none " href="/viewDetails" target="_blank " rel="noopener noreferrer ">
+                                <a class="text-decoration-none " href="/viewMess/{{mess_id}}" target="_blank " rel="noopener noreferrer ">
                                     <div class="card ">
                                         <div class="py-3 ">
                                             <div class="card-img text-center ">
@@ -436,14 +436,17 @@
                     $('#data2 > div').remove();
                 }
 
-                $("#data2").append("<div id='items' class='col-md-3 col-sm-6'><div><a class='text-decoration-none' href='/viewDetails' target='_blank ' rel='noopener noreferrer '><div class='card '><div class='py-3 '><div class='card-img text-center '><img src='/static/Asset/handi.webp ' alt='Food-Image ' srcset=' '></div><div class='card-body '><h5 id='messName'>"+output.output[i].mess_name+"</h5><p style='margin-bottom: 0.5625rem; '><span class='spacing '><strong>Type</strong>  : <span id='foodType'>"+output.output[i].food_type+"</span> </span></p><p><strong>Address</strong> : <span id=''>"+output.output[i].address+"</span> <span id=''>"+output.output[i].location+"</span id=''>"+output.output[i].city+"</span></p><hr><div class='d-flex flex-row justify-content-between pt-2 '><div><i class='fa-sharp fa-solid fa-star '><span style='font-size:0.8125rem; '> "+output.output[i].rating+"</span></i></div><div><i class='fa-solid fa-indian-rupee-sign '></i> "+output.output[i].cost_range+"</div></div></div></div></div></a></div></div>");
+                $("#data2").append("<div id='items' class='col-md-3 col-sm-6'><div><a class='text-decoration-none' id='mess' target='_blank '  rel='noopener noreferrer '><div class='card '><div class='py-3 '><div class='card-img text-center '><img src='/static/Asset/handi.webp ' alt='Food-Image ' srcset=' '></div><div class='card-body '><h5 id='messName'>"+output.output[i].mess_name+"</h5><p style='margin-bottom: 0.5625rem; '><span class='spacing '><strong>Type</strong>  : <span id='foodType'>"+output.output[i].food_type+"</span> </span></p><p><strong>Address</strong> : <span id=''>"+output.output[i].address+"</span> <span id=''>"+output.output[i].location+"</span id=''>"+output.output[i].city+"</span></p><hr><div class='d-flex flex-row justify-content-between pt-2 '><div><i class='fa-sharp fa-solid fa-star '><span style='font-size:0.8125rem; '> "+output.output[i].rating+"</span></i></div><div><i class='fa-solid fa-indian-rupee-sign '></i> "+output.output[i].cost_range+"</div></div></div></div></div></a></div></div>");
 
 
 
 {{!-- $('#items').last().remove(); --}}
             }
  $('#data2').show(); 
-         });
+});
 
-    });
+});
+
+
+
 </script>

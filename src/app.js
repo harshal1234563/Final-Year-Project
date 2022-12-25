@@ -33,57 +33,20 @@ app.engine(
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server started on port ${port}`));
-
-
-//! setup main route.
-app.get("/", (req, res) => {
+//!==========================================================================================================================
 
 
 
-  let qry = "select * from tiffin_provider ORDER BY rating DESC LIMIT 0,4";
-  mysql.query(qry, (err, results) => {
-    if (err) throw err;
-    else {
-      res.render("index", { data: results });
-    }
-  });
+
+var userInfo = "";
+var usrLocation ="" ;
+var usrCity = "";
 
 
 
-});
-
-app.post('/test', (req, res)=>{
-  console.log("route hit");
-
-  const priority = req.body.val;
-
-  let qry ;
-
-  if(priority == "Price"){
-    qry = "SELECT * FROM tiffin_provider WHERE cost_range=(SELECT MIN(cost_range) FROM tiffin_provider) AND city = 'wardha' AND rating >=4 ORDER BY pos_count DESC LIMIT 0,4;"
-  }else if(priority == "Location"){
-    qry = "SELECT * FROM tiffin_provider WHERE location = 'Dhantoli' AND city='Wardha' AND rating =5 ORDER BY pos_count DESC LIMIT 0,4;"
-  }else{
-    qry = "SELECT * FROM tiffin_provider WHERE city='Wardha' AND rating >= 4 ORDER BY taste_count DESC LIMIT 0,4;"
-  }
-
-  mysql.query(qry, (err, results) => {
-    if (err) throw err;
-    else {
-      res.json([{
-        output: results
-      }])
-    }
-  });
-//   res.json([{
-//     req.body.val
-//  }])
- console.log(req.body.val);
 
 
-
-})
-
+// *=======================================================================
 // !login routes
 app.get("/login", (req, res) => {
   res.render("login");
@@ -99,8 +62,8 @@ app.get("/loginUser", (req, res) => {
     else {
       if (results.length > 0) {
         req.session.loggedin = true;
-        
-console.log("test s");
+        userInfo = email;
+
         res.writeHead(301, { Location: "/" }, { login: true });
         res.end();
       } else {
@@ -110,6 +73,83 @@ console.log("test s");
   });
 });
 
+//! setup main route.
+app.get("/", (req, res) => {
+  
+
+
+  let qry = "select * from tiffin_provider ORDER BY rating DESC LIMIT 0,4";
+  mysql.query(qry, (err, results) => {
+    if (err) throw err;
+    else {
+      res.render("index", { data: results });
+    }
+  });
+
+  console.log(userInfo);
+
+  
+});
+
+// =====================================================================
+// !priority based recommendation
+app.post("/test", (req, res) => {
+  // console.log("route hit");
+
+  
+  if(req.session.loggedin){
+      // ! === fetching user details ===
+  let slctqry = "select * from user_details where email=?";
+
+  mysql.query(slctqry, [userInfo], (err, results) => {
+    if (err) throw err;
+    else {
+      console.log(results[0].name);
+      usrLocation = results[0].location;
+      usrCity = results[0].city;
+    }
+  });
+
+  console.log(usrLocation);
+
+  const priority = req.body.val;
+
+  let qry;
+
+  if (priority == "Price") {
+    qry =
+      "SELECT * FROM tiffin_provider WHERE cost_range=(SELECT MIN(cost_range) FROM tiffin_provider) AND city ='" +usrCity+"' AND rating >=4 ORDER BY pos_count DESC LIMIT 0,4;";
+  } else if (priority == "Location") {
+    qry =
+      "SELECT * FROM tiffin_provider WHERE location = '" + usrLocation+ "'AND city= '" + usrCity+ "'AND rating =5 ORDER BY pos_count DESC LIMIT 0,4;";
+  } else if (priority == "Taste") {
+    qry =
+      "SELECT * FROM tiffin_provider WHERE city='" + usrCity+ "'AND rating >= 4 ORDER BY taste_count DESC LIMIT 0,4;";
+  } else {
+    qry = "select * from tiffin_provider ORDER BY rating DESC LIMIT 0,4";
+  }
+
+  mysql.query(qry, (err, results) => {
+    if (err) throw err;
+    else {
+      res.json([
+        {
+          output: results,
+        },
+      ]);
+    }
+  });
+  }
+
+
+  //   res.json([{
+  //     req.body.val
+  //  }])
+  console.log(req.body.val);
+});
+
+//  =====================================================================
+// ! Add User
 app.get("/createAccount", (req, res) => {
   res.render("register");
 });
@@ -146,8 +186,46 @@ app.get("/addUser", (req, res) => {
 
 // Admin Routes
 app.get("/register", (req, res) => {});
-app.get("/viewDetails", (req, res) => {});
 
+
+
+app.get("/viewMess/:messId", function(req, res) {
+
+  const requestedMesstId = req.params.messId;
+
+  let qry= "select * from tiffin_provider where mess_id ='" + requestedMesstId+ "'";
+  mysql.query(qry, (err, results) => {
+    if (err) throw err;
+    else {
+      res.render("mess", { data: results });
+    }
+  });
+
+  // res.send(requestedPostId)
+});
+
+app.get("/cart/mess/:messId/user/:userId", (req, res) => {
+
+  const requestedMesstId = req.params.messId;
+  const requestedUserId = req.params.userId;
+
+  let messqry= "select * from tiffin_provider where mess_id ='" + requestedMesstId+ "'";
+  let usrqry= "select * from user_details where user_id = '" + requestedUserId+ "'";
+
+  mysql.query(messqry, (err, results) => {
+    if (err) throw err;
+    else {
+      res.render("cart", { data: results });
+    }
+  });
+
+
+
+  // res.send("mess id : " + requestedMesstId + " user id : " + requestedUserId);
+});
+
+// ====================================
+// ! Cart Route
 app.get("/cart", (req, res) => {
   if (req.session.loggedin) {
     // Output username

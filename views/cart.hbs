@@ -277,6 +277,7 @@
 
       <!-- ========= Cart-section ========== -->
       <div class="col-md-3">
+        {{#data}}
         <div class="container section-color p-3 cart-section">
           <!-- -------------Cart-header-name ------------ -->
           <div class="d-flex flex-md-row justify-content-start mb-4">
@@ -285,8 +286,8 @@
             </div>
             <div class="info-container ms-3">
               <p>
-                <span class="o-name">Sharma Mess...</span>
-                <span class="o-address">Arvi-Naka, Wardha, 442001</span>
+                <span class="o-name">{{mess_name}}</span>
+                <span class="o-address">{{location}} {{city}}</span>
               </p>
 
             </div>
@@ -294,7 +295,7 @@
           <!-- --------- tiffin-info --------- -->
           <div class="d-flex justify-content-between cart-body mb-4">
             <div class="">
-              <p>Normal Veg Tiffin</p>
+              <p>Normal Tiffin</p>
             </div>
             <div class="">
               <div class="cart-btn">
@@ -330,7 +331,7 @@
 
 
           <!-- ---------- Coupon ------------ -->
-          <div class="coupon mb-4"><img src="./Asset/dis.png" alt="discount" width="25">&nbsp; &nbsp;Apply Coupon</div>
+          <div class="coupon mb-4"><img src="/static/Asset/dis.png" alt="discount" width="25">&nbsp; &nbsp;Apply Coupon</div>
           <hr>
           <!-- -----------bill-details---------- -->
           <div class="bill-detail mb-4">
@@ -355,6 +356,7 @@
 
           </div>
         </div>
+        {{/data}}
       </div>
     </div>
   </div>
