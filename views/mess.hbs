@@ -1,0 +1,307 @@
+    <link rel="stylesheet " href="/static/css/style.css">
+<style>
+    .vr {
+        border: 1px solid rgb(248, 252, 248);
+        background-color: #fff;
+    }
+    
+    tr {
+        height: 70px;
+    }
+    
+    icon-shape {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+    }
+    
+    .icon-sm {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .t-Content {
+        display: inline-block;
+        margin-left: 83px;
+        margin-top: -23px;
+    }
+    /* .box{
+    border: 2px solid black;
+} */
+    /* ************ header-Mess-Details ********* */
+    
+    .h-mess-details {
+        color: #fff;
+    }
+    
+    .m-info {}
+    
+    .m-info p {
+        margin-bottom: 5px;
+        font-size: 15px;
+        color: inherit;
+        opacity: .7;
+    }
+    
+    .offer {
+        color: #fff;
+        border: dashed 2px #fff;
+        font-size: 14px;
+        /* border: dotted 2px rgb(0, 0, 0, 0.3); */
+        border-radius: 1px;
+        padding: 0px 0px 0px 40px;
+    }
+    
+    .offer .h-offer {
+        color: inherit;
+        font-size: 20px;
+        font-weight: 500;
+        background-color: #171a29;
+        display: inline-block;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        position: relative;
+        top: -13px;
+        left: -50px;
+    }
+    
+    .coupon-info {
+        display: block;
+        margin: -1.75rem 0px 0px 2.5rem;
+    }
+    /* ************** Main-mess-detail ***********/
+    
+    .cart-btn {
+        border: 2px solid rgb(37, 42, 71);
+        padding: 5px;
+        color: rgb(37, 42, 71);
+    }
+    
+    .cart-btn .a-d-btn {
+        padding: 0px 12px;
+        cursor: pointer;
+        /* background-color: rgb(37, 42, 71, 0.7); */
+        /* color: #fff; */
+        border-radius: 1px;
+    }
+    
+    .card-body .content {
+        display: block;
+        margin: -1.5625rem 0px 0px 5rem;
+    }
+    
+    .tiffin-type {
+        margin: 1.25rem 0px;
+    }
+    /* ************ Cart-Bbutton ******** */
+    
+    .checkout-btn {
+        display: block;
+        text-decoration: none;
+        color: #fff;
+        background-color: rgb(33, 40, 73);
+        padding: 10px;
+        text-align: center;
+    }
+    
+    .checkout-btn:hover {
+        color: #fff;
+    }
+    
+    .checkout-btn:hover .fa-arrow-right {
+        color: #fff;
+        transform: translate(15px);
+        transition: transform 0.4s ease-in-out;
+    }
+    /* ****************** Table ********************** */
+    
+    table>tbody>tr>td {
+        vertical-align: middle;
+    }
+    
+    table>thead>tr>th {
+        vertical-align: middle;
+    }
+</style>
+
+{{> navbar}}
+
+<!-- *======================== header-Mess-Section ====================== -->
+            <section id="header-details">
+                <div class="container py-4">
+                    <div class="row py-3">
+                        <!-- -------- Header-Mess-Image -------- -->
+                        <div class="col-md-3">
+                            <img src="/static/Asset/handi.webp" alt="" srcset="" width="300">
+                        </div>
+
+
+                        <!-- -------- Header-Mess-Information -------- -->
+                        <div class="col-md-6">
+                            <div class="h-mess-details">
+                                <h3>Sharma Mess</h3>
+                                <div class="m-info">
+                                    <p>Maharashtrian, Gujrati</p>
+                                    <p>Wardha, Maharashtra 42001</p>
+                                    <div class="py-5">
+                                        <span class="me-5"><i class="fa-sharp fa-solid fa-star"><span style="font-size:0.8125rem;"> 4.5</span></i>
+                                        </span>
+                                        <span class="vr me-5"></span>
+                                        <span><i class="fa-solid fa-indian-rupee-sign"></i> 200</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- -------- Header-Discount-Secton -------- -->
+                        <div class="col-md-3">
+                            <div class="offer">
+                                <div class="">
+                                    <h6 class="h-offer">OFFER</h6>
+                                    <div><img src="/static/Asset/dis.png" alt="discount" width="25"></div>
+                                    <div class="coupon-info">
+                                        <p>60% off up to ₹100 | Use code WELCOMEBACK</p>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div><img src="/static/Asset/dis.png" alt="discount" width="25"></div>
+                                    <div class="coupon-info">
+                                        <p>60% off up to ₹100 | Use code WELCOMEBACK</p>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+
+            <!-- *================================== Mess Details ================================================== -->
+
+        <section class="mess-details py-5">
+            <div class="container">
+                <div class="row">
+                    <!-- ------------- mess-details ------------- -->
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-4"><img src="/static/Asset/handi.webp" alt="" srcset="" width="300" height="250"></div>
+                            <div class="col-md-8">
+                                <div class="card-body px-5">
+                                    <h4>Sharma Mess</h4>
+                                    <p style="margin-bottom: 0.5625rem;"><span class=""><strong>Type : </strong>Veg</span></p>
+                                    <p><strong>Content : </strong> <span class="content">1 Veg Dish, 1 Dal, 3 Rotis, 1 Rice, 1 Raita / Salad / Dessert</span>
+                                    </p>
+                                    <hr>
+                                    <div class="d-flex flex-row justify-content-between pt-3 mt-2 ">
+                                        <div class="cart-btn ">
+                                            <span class="a-d-btn ">-</span><span class="mx-3 ">1</span><span class="a-d-btn ">+</span>
+                                        </div>
+
+                                        <div><i class="fa-solid fa-indian-rupee-sign "></i> 200</div>
+                                    </div>
+
+                                    <div class="tiffin-type">
+                                        <p>Select Your Choice</p>
+                                        <div class="my-2">
+                                            <input class="form-check-input me-2" type="radio" name="inlineRadioOptions" id="singleMeal" value="option1">
+                                            <label class="form-check-label" for="singleMeal">One Time</label>
+                                        </div>
+                                        <div>
+                                            <input class="form-check-input me-2" type="radio" name="inlineRadioOptions" id="fullTime" value="option1">
+                                            <label class="form-check-label" for="fullTime">Two Time</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ----------------- cart -------------- -->
+                    <div class="col-md-3 ">
+                        <h4>Cart</h4>
+                        <div class="d-flex flex-row justify-content-between pb-3 ">
+                            <div style="margin: auto 0px; ">
+                                <strong> Items: </strong>
+                            </div>
+                            <div class="cart-btn ">
+                                <span class="a-d-btn ">-</span><span class="mx-3 ">1</span><span class="a-d-btn ">+</span>
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-row justify-content-between pb-3 " title="Select Start Date Of Service">
+                            <div style="margin: auto 0px; ">
+                                <strong> Start Date: </strong>
+                            </div>
+                            <div class="">
+                                <input type="date">
+                            </div>
+
+                        </div>
+                        <div class="d-flex flex-row justify-content-between pb-3 " title="Select End Date Of Service">
+                            <div style="margin: auto 0px; ">
+                                <strong> End Date: </strong>
+                            </div>
+                            <div class=" ">
+                                <input type="date">
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="d-flex flex-row justify-content-between pt-3">
+                            <div>
+                                <p><strong> Subtotal: </strong></p>
+                            </div>
+                            <div class=" ">
+                                <i class="fa-solid fa-indian-rupee-sign "></i> 200
+                            </div>
+
+                        </div>
+
+                        <div class="py-2 ">
+                            <a href=" " class="checkout-btn ">Checkout <span class="fas fa-arrow-right ms-3 "></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- *======================== details-Section ====================== -->
+        <section class="details-table py-5 ">
+            <div class="container ">
+                <table class="table table-bordered table-sm text-center mx-auto " style="width: 75%; height: 100px; ">
+                    <thead>
+                        <tr class="table-dark ">
+                            <th>Category</th>
+                            <th>Single Meal</th>
+                            <th>30 Days Plan</th>
+                            <th>Delivery Charge</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-active ">
+                            <td>Veg</td>
+                            <td>200</td>
+                            <td>5000</td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td>Non-Veg</td>
+                            <td>250</td>
+                            <td>6500</td>
+                            <td>Free</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+{{> last}}

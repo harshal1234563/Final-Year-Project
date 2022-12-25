@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&display=swap");
+
+
+/* Remove padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.8em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+.fs-18 {
+    font-size: 17px;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ********** Cuatom-CSS ********* */
+
+.nav-item {
+    margin-left: 50px;
+}
+
+.search button {
+    background: none;
+}
+
+.nav-btn {
+    border-bottom: solid black 2px transparent;
+}
+
+.nav-btn:hover {
+    border-bottom: solid black 2px;
+    /* outline-width: 10px; */
+}
+
+
+#header-details{
+    background-color: #171a29;
+}
+
+.c-button {
+    text-decoration: none;
+    /* margin: 0 20px 0 30px; */
+    padding: 10px 30px;
+    color: white;
+    background-color: #212849;
+    border: solid #1d1134 2px;
+    border-radius: 5px;
+}
+
+.c-button:hover {
+    transition: 0.3s linear;
+    background-color: #171a29;
+    color: white;
+}
